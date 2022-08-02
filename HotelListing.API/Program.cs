@@ -32,6 +32,7 @@ builder.Host.UseSerilog((ctx, lc) => lc.WriteTo.Console().ReadFrom.Configuration
 builder.Services.AddAutoMapper(typeof(MapperConfig));
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRespository<>)); // why typeof vs <> with these two lines?
 builder.Services.AddScoped<ICountriesRespository, CountriesRespository>();
+builder.Services.AddScoped<IHotelsRespository, HotelsRespository>();
 
 
 
